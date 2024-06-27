@@ -9,7 +9,7 @@ include 'connect.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard</title>
+    <title>User Feedback Portal</title>
     <link rel="stylesheet" href="homepagestyle.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
@@ -148,7 +148,7 @@ include 'connect.php';
                     <button type="submit" class="submit-button">Submit</button>
                 </form>
 </section>
-            <div id="feedbackModal" class="modal">
+<div id="feedbackModal" class="modal">
                 <div class="modal-content">
                     <p id="modal-message"><?php 
                         if (isset($_SESSION['feedback_message'])) {
@@ -158,13 +158,14 @@ include 'connect.php';
                     ?></p>
                     <span class="close">&times;</span>
                 </div>
-        </div>
+            </div>
+
     </div>
         </main>
     </div>
     <footer>
         <p>&copy; 2024 SNTI Internship.</p>
     </footer>
-    <script src="homepagescript.js"></script>
+    <script src="userpagescript.js"></script>
 </body>
 </html>  

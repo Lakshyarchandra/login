@@ -1,8 +1,6 @@
 <?php
 session_start();
-include 'connect.php';
-
-?>
+include 'connect.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +14,18 @@ include 'connect.php';
 <body>
     <header>
         <div class="header-content">
-            <img src="logo.png" alt="Company Logo" class="logo">
+        <?php
+           $email = $_SESSION['email'];
+           $query = "SELECT * FROM userinfo WHERE email='$email'";
+           $result = $conn->query($query);
+           if ($result->num_rows > 0) {
+           $row = $result->fetch_assoc();
+           $logoPath = $row['filepath'];}
+else {
+    $logoPath = 'pic.png';
+}
+?>
+        <img src="<?php echo $logoPath; ?>" alt="Company Logo" class="logo">
             <p>Hello 
                 <?php 
                 if (isset($_SESSION['email'])) {
@@ -92,14 +101,13 @@ include 'connect.php';
                         <label for="contact">Contact</label>
                         <input type="text" id="contact" name="contact" required>
                     </div>
-                    <!-- <div class="form-group">
-                    <label for="fileToUpload">Select image to upload:</label>
-                    <input type="file" name="fileToUpload" id="fileToUpload" required><br>
-                    </div> -->
+                    <div class="form-group">
+                    <label for="file">Select image to upload:</label>
+                    <input type="file" name="image" id="image" required><br>
+                    </div>
                     <input type="submit" class="submit-button" value="Submit" name="complete-registration">
                 </form>
             </section>
-
 <section id="show-details" class="section">
     <h2>Your Details</h2>
     <?php 

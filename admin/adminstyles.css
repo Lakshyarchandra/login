@@ -62,7 +62,7 @@ body {
 
 header {
   /* background: rgba(198, 200, 178, 0.8); */
-  background: linear-gradient(to right, #e2e2e2, #afc1f9);
+  background: linear-gradient(to right, #386c72, #41f9ff);
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -100,13 +100,13 @@ header.hide {
 }
 
 .logout-button {
-  background: #2d2c2c;
+  background: #362a2adf;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   left: -30px;
-  border-radius: 20px;
+  border-radius: 8px;
   position: relative;
   transition: background 0.3s ease;
 }
@@ -124,7 +124,7 @@ header.hide {
 
 .sidebar {
   width: 250px;
-  background: linear-gradient(to left, #dde0b3, #adbcef);
+  background: linear-gradient(to left, #cdb9e4, #9fb4fa);
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -162,7 +162,7 @@ header.hide {
 .content {
   flex: 1;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(151, 221, 213, 0.573);
   border-radius: 20px;
   margin: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -240,47 +240,11 @@ h2 {
   background: #0984e3;
 }
 
-.dataTables_wrapper .dataTables_length select {
-  width: auto;
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.dataTables_wrapper .dataTables_filter input {
-  width: auto;
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.dataTables_wrapper .dataTables_paginate {
-  margin: 20px 0;
-}
-
-.dataTables_wrapper .dataTables_paginate .paginate_button {
-  padding: 6px 12px;
-  margin: 2px;
-  border-radius: 4px;
-  background-color: #1b2127;
-  color: white;
-}
-
-.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-  background-color: #0984e3;
-}
-
-.dataTables_wrapper .dataTables_info {
-  margin: 20px 0;
-}
-
-.dataTables_wrapper .dataTables_filter {
-  margin: 20px 0;
-}
-
 footer {
   /* background:  rgba(198, 200, 178, 0.8); */
-  background: linear-gradient(to right, #e2e2e2, #afc1f9);
+  background: linear-gradient(to right, #386c72, #41f9ff);
   padding: 10px;
   text-align: center;
-  color: #636e72;
+  color: #000000;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }

@@ -63,7 +63,7 @@
       </div>
       <div class="container" id="adminLogin" style="display:none;">
         <h1 class="form-title">Admin Login</h1>
-        <form method="post" action="adminlogin.php">
+        <form method="post" action="../admin/adminlogin.php">
           <div class="input-group">
               <i class="fas fa-envelope"></i>
               <input type="email" name="adminEmail" id="adminEmail" placeholder="Admin Email" required>

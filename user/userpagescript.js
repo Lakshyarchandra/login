@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialize datepicker
+  $(".datepicker").datepicker({
+    format: "dd-mm-yyyy",
+    autoclose: true,
+    todayHighlight: true,
+  });
+
   // Logout button confirmation
   const logoutButton = document.querySelector("#logout-link .logout-button");
   const logoutLink = document.querySelector("#logout-link");

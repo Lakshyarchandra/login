@@ -13,10 +13,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sanitize input
     $name = $conn->real_escape_string($name);
     $email = $conn->real_escape_string($email);
-    $dob = $conn->real_escape_string($dob);
     $college = $conn->real_escape_string($college);
     $course = $conn->real_escape_string($course);
     $contact = $conn->real_escape_string($contact);
+
+    // Debugging: Output the received date
+    error_log("Received date: $dob");
+
+    // Convert date from dd-mm-yyyy to yyyy-mm-dd
+    $dobObject = DateTime::createFromFormat('d-m-Y', $dob);
+    if ($dobObject !== false) {
+        $dob = $dobObject->format('Y-m-d');
+    } else {
+        echo "Invalid date format. Please use dd-mm-yyyy format.";
+        exit();
+    }
+
+    // Debugging: Output the converted date
+    error_log("Converted date: $dob");
 
     // Check if the email is already registered
     $checkQuery = "SELECT * FROM userinfo WHERE email='$email'";

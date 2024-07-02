@@ -24,25 +24,16 @@ if (mysqli_num_rows($query) > 0) {
     $details['Error'] = "No Info Found !! Contact Helpdesk";
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="adminstyles.css">
+    <link rel="stylesheet" href="adminstyle.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/buttons/2.1.0/css/buttons.dataTables.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.1.0/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.print.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-docx-js/0.3.1/html-docx.min.js"></script>
 </head>
 <body>
     <header>
@@ -52,8 +43,6 @@ if (mysqli_num_rows($query) > 0) {
             <a href="logout.php" id="logout-link">
                 <button class="logout-button btn btn-primary">Logout</button>
             </a>
-
-            <!-- The Modal -->
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <p>Are you sure you want to logout?</p>
@@ -68,7 +57,7 @@ if (mysqli_num_rows($query) > 0) {
             <nav>
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link" href="#personal-information">Personal Information</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#reports">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reports">Registered User Details</a></li>
                 </ul>
             </nav>
         </aside>
@@ -86,25 +75,35 @@ if (mysqli_num_rows($query) > 0) {
                 ?>
             </section>
             <section id="reports" class="section">
-                <h2>Reports</h2>
+                <h2>Registered User Details</h2>
                 <table id="userinfoTable" class="table table-striped table-bordered">
                     <thead>
                         <tr>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Date Of Birth</th>
-                            <th>Collge</th>
+                            <th>College</th>
                             <th>Contact</th>
                             <th>File Name</th>
+                            <th>Feedback Type</th>
+                            <th>Comments</th>
+                            <th>Submission Date </th>
                         </tr>
                     </thead>
+                    <tbody>
+                        <!-- Data will be populated here by JavaScript -->
+                    </tbody>
                 </table>
+                <button class="export-word">Export Word</button>
+                <button class="export-csv">Export CSV</button>
+                
             </section>
         </main>
     </div>
     <footer>
         <p>&copy; 2024 SNTI Internship.</p>
     </footer>
-    <script src="adminscript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="adminscripts.js"></script>
 </body>
 </html>

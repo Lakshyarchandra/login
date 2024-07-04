@@ -67,7 +67,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: left;
-  color: #333;
+  color: #2d2a2a;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
@@ -105,7 +105,7 @@ header.hide {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  left: -30px;
+  left: -10px;
   border-radius: 5px;
   position: relative;
   transition: background 0.3s ease;
@@ -124,7 +124,7 @@ header.hide {
 
 .sidebar {
   width: 250px;
-  background: linear-gradient(to left, #f3f9a4, #a3b7f9);
+  background: linear-gradient(to top, #f0f7a5, #865fbd);
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -164,7 +164,7 @@ header.hide {
 .content {
   flex: 1;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(187, 232, 225, 0.6);
   border-radius: 20px;
   margin: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -281,9 +281,9 @@ h2 {
 
 footer {
   /* background:  rgba(198, 200, 178, 0.8); */
-  background: linear-gradient(to right, #e2e2e2, #afc1f9);
+  background: linear-gradient(to right, #5c5252, #65a6ef);
   padding: 10px;
   text-align: center;
-  color: #636e72;
+  color: #000000;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
